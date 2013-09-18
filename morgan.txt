@@ -1,0 +1,12 @@
+1. My experience with web architecture is in making my personal porfolio, 
+a small cooking game built on javascript and several projects from my 
+first year in MIMS (Visualizations and small web apps). I have written 
+HTML, CSS, and JavaScript before; I do coding for the web enough to 
+prototype most things.
+2. My favorite features of Chrome are the synchronization of my browsing 
+data accross computers in which I share a Chrome log in. I also like 
+Chrome's ability to restore rectly closed tabs with Cmd + Shift + T.
+	Safari has some of my other favorite browser features. I like its 
+clean look and feel. I also like that it has a "reader" function that 
+shows only the article text and strips out everything else. 
+
