@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio">
+    <meta name="author" content="Morgan Wallace">
+
+
+    <title>Morgan's Madlib</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--   Custom Style Sheet   -->
+	 <link href="css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    
+   <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,200' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default ">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Morgan Wallace</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+          <!--
+<ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top</a></li>
+          </ul>
+-->
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+		
+      <div class="jumbotron">
+        <h1>Morgan's Madlibs</h1>
+        <p>Make the story your own</p>
+      </div>
+
+	  <div id="story">
+	  	<h2>In the year 3000...</h2>
+
+		<!-- 	Form 	 -->
+	  	<form id="madlibForm" role="form" action="madlibs.html" method="POST">
+	  		<div class='form-group' id="you-name-div">
+		  		<label>What is your name?
+		  			<input type="text" class="form-control" id="your-name" placeholder="Han Solo">
+		  		</label>				
+		  		<label>How old are you?
+		  			<input type="number" class="form-control" placeholder="25" value="25">
+		  		</label>
+	  		</div>
+	  		<div id='vehicle-selection'>
+	  			<label for"vehicle">What's your ride?
+				  	<div class="radio">
+					  <label>
+					    <input type="radio" name="vehicle-radio" id="optionsRadios1" value="spaceship" checked>
+					    Spaceship</label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="vehicle-radio" id="optionsRadios2" value="hoverboard" >
+					    Hoverboard</label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="vehicle-radio" id="optionsRadios3" value="dog sled" >
+					    Dog sled</label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="vehicle-radio" id="optionsRadios4" value="teleporter" >
+					    Teleporter</label>
+					</div>
+				</label>
+ 	  		</div><!--end radios - end vehicle selection -->
+ 	  		<label>What's a cool adjective?
+		  		<input type="text" class="form-control" id="adj" placeholder="Splendiferous">
+		  	</label>
+		  	<label>What's a cool noun?
+		  		<input type="text" class="form-control" id="noun" placeholder="Mongoose">
+		  	</label>	
+ 	  		<br>
+ 	  		<label>Where are you from?
+	 	  		<select class="form-control" id="pick-state">
+	 	  		<option value="AL">--Select state</option>
+	 	  		    <option value="own-state">*Create my own</option>
+					<option value="Alabama">Alabama</option>
+					<option value="Alaska">Alaska</option>
+					<option value="Arizona">Arizona</option>
+					<option value="Arkansas">Arkansas</option>
+					<option value="California">California</option>
+					<option value="Colorado">Colorado</option>
+					<option value="Connecticut">Connecticut</option>
+					<option value="Delaware">Delaware</option>
+					<option value="District Of Columbia">District Of Columbia</option>
+					<option value="Florida">Florida</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Hawaii">Hawaii</option>
+					<option value="Idaho">Idaho</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kansas">Kansas</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Louisiana">Louisiana</option>
+					<option value="Maine">Maine</option>
+					<option value="Maryland">Maryland</option>
+					<option value="Massachusetts">Massachusetts</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Minnesota">Minnesota</option>
+					<option value="Mississippi">Mississippi</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Montana">Montana</option>
+					<option value="Nebraska">Nebraska</option>
+					<option value="Nevada">Nevada</option>
+					<option value="New Hampshire">New Hampshire</option>
+					<option value="New Jersey">New Jersey</option>
+					<option value="New Mexico">New Mexico</option>
+					<option value="New York">New York</option>
+					<option value="North Carolina">North Carolina</option>
+					<option value="North Dakota">North Dakota</option>
+					<option value="Ohio">Ohio</option>
+					<option value="Oklahoma">Oklahoma</option>
+					<option value="Oregon">Oregon</option>
+					<option value="Pennsylvania">Pennsylvania</option>
+					<option value="Rhode Island">Rhode Island</option>
+					<option value="South Carolina">South Carolina</option>
+					<option value="South Dakota">South Dakota</option>
+					<option value="Tennessee">Tennessee</option>
+					<option value="Texas">Texas</option>
+					<option value="Utah">Utah</option>
+					<option value="Vermont">Vermont</option>
+					<option value="Virginia">Virginia</option>
+					<option value="Washington">Washington</option>
+					<option value="West Virginia">West Virginia</option>
+					<option value="Wisconsin">Wisconsin</option>
+					<option value="Wyoming">Wyoming</option>
+				</select>
+			</label>
+			<label id='name-your-home'>Name your home:
+		  		<input type="text" class="form-control" id="own-place" placeholder="Berzerkeley">
+		  	</label>
+
+ 	  		<br>
+ 	  		
+ 	  		<div class="checkbox">
+	 	  		<label>
+				    <input type="checkbox" value="" name="terms_of_use" id='terms_of_use' required>
+				    I affirm that this is the coolest madlib ever (required)
+				</label>
+			</div>
+			
+			<div class="checkbox">
+				<label>
+				    <input type="checkbox" value="" name="beer_fund" id="beer-fund">
+				    I pledge to donate $5 to the Morgan Wallace "Beer Fund"</label>
+			</div>
+			<div id='credit-card'>
+				<label>Donate with Credit Card
+					<input type="text" class="form-control" id='ccNum'>
+				</label>
+			</div>
+			<div id='error-alert' class="alert alert-danger">It's ok. Everybody makes mistakes:<ul id='error-list'></ul></div>
+			<button type="submit" class="btn btn-default" onclick="return False">Make me a story!!!</button>	  	
+		</form> <!-- 	End Form  	 -->
+
+	  	<div id="story-text" class="jumbotron">
+	  	</div>
+      </div>
+	
+    </div> <!-- /container -->
+  
+
+
+    <!--  JavaScript - it loads the page faster when down here. -->
+    <script src="js/jquery-1.8.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>  
+    <script src="js/form-validator.js"></script> 
+
+</body></html>
