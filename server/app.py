@@ -19,7 +19,7 @@ db = shelve.open("shorten.db")
 @app.route('/home', methods=['GET'])
 def home():
     """Builds a template based on a GET request, with some default
-    arguements"""
+    arguments"""
     index_title = request.args.get("title", "i253")
     hello_name = request.args.get("name", "Jim")
     return flask.render_template(
@@ -32,6 +32,7 @@ def home():
 # Wiki Resource:
 # GET method will redirect to the resource stored by PUT, by default: Wikipedia.org
 # POST/PUT method will update the redirect destination
+
 ###
 @app.route('/wiki', methods=['GET'])
 def wiki_get():
@@ -74,7 +75,7 @@ def i253():
                 '-raise', '30',
                 'png:-']), 200);
     # Comment in to set header below
-    # resp.headers['Content-Type'] = '...'
+    resp.headers['Content-Type'] = 'image/png'
 
     return resp
 

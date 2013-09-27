@@ -1,0 +1,49 @@
+Answers to Homework 5
+
+2.1 Tasks with Telnet
+1. The HTTP command is "GET." app.py looks for the name in the request. It then saves it in a variable; that variable is then handed to the render function as an argument. When the sever renders, the HTML template (Jinja) will put the variable into the HTML document, ready to be rendered by the browser.
+
+2.harbinger:~/webarch2013/server$ telnet 127.0.0.1 $FLASK_PORT
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+PUT /wiki HTTP/1.1
+Host: localhost
+Content-Length: 21
+Content-Type: application/x-www-form-urlencoded
+
+url=http://disney.com
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 32
+Server: Werkzeug/0.8.3 Python/2.7.3
+Date: Fri, 27 Sep 2013 23:32:57 GMT
+
+Stored wiki => http://disney.comConnection closed by foreign host.
+
+
+
+You can verify this change by looking at the Stored Wiki which returns Disney's website. This was implemented in the app.py file.
+
+3.
+harbinger:~/webarch2013/server$ telnet 127.0.0.1 $FLASK_PORT
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+POST /wiki HTTP/1.1
+Host: localhost
+Content-Length: 21
+Content-Type: application/x-www-form-urlencoded
+
+url=http://google.com            
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 32
+Server: Werkzeug/0.8.3 Python/2.7.3
+Date: Fri, 27 Sep 2013 23:37:23 GMT
+
+Stored wiki => http://google.comConnection closed by foreign host.
+ 
+4. I uncommented this line and inserted image/png as the content type:
+resp.headers['Content-Type'] = 'image/png'
+
