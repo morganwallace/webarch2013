@@ -1,0 +1,37 @@
+Morgan Wallace's Answers to Web Arch Fall 2013
+
+1. 	SERIES OF IPs THAT A RECURSIVE DNS SERVER USES TO FIND M.YELP.COM
+	Starting with:
+	host -v m.yelp.com 199.7.83.42
+	AUTHORITY:
+	a.gtld-servers.net.   192.5.6.30
+	
+		host -v m.yelp.com 192.5.6.30
+		AUTHORITY
+		ns1.p18.dynect.net.   208.78.70.18
+		
+			host -v m.yelp.com 208.78.70.18
+			ANSWER SECTION
+			m.yelp.com    199.255.189.234
+			
+				
+				
+
+2. IPs for m.yelp.com
+	199.255.189.234  
+	198.51.132.34  
+    199.255.189.34  
+    198.51.132.234 
+
+3. Do IP packets leave the Berkeley network when travelling to amplab.cs.berkeley.edu?
+
+	harbinger:~/webarch2013$ traceroute amplab.cs.berkeley.edu
+	traceroute to amplab.cs.berkeley.edu (128.32.37.248), 30 hops max, 60 byte packets
+	 1  g3-35.inr-211-srb.Berkeley.EDU (128.32.78.3)  0.941 ms  0.957 ms  0.923 ms
+	 2  t6-1.inr-202-reccev.Berkeley.EDU (128.32.255.126)  0.970 ms  1.001 ms  1.039 ms
+	 3  evans-eecs-br-10GE.EECS.Berkeley.EDU (128.32.255.54)  2.883 ms  2.900 ms  2.853 ms
+	 4  soda-10g-edge.EECS.Berkeley.EDU (169.229.59.242)  2.423 ms  2.429 ms  2.481 ms
+	 5  www-research2.CS.Berkeley.EDU (128.32.37.248)  1.686 ms !X  1.706 ms !X  1.768 ms !X
+
+	 Morgan's answer:
+	 	No the packets never leave the berkeley network when travelling to amplab.cs.berkeley.edu.
