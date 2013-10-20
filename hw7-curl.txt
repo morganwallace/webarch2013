@@ -1,0 +1,44 @@
+What’s the diﬀerence between Yelp’s 
+homepage compressed and uncompressed?
+
+Use curl - downloads items from internet
+man curl to get help
+-v: provide verbose output
+-H: specify HTTP headers
+>: redirect command output to ﬁle
+
+ANSWER:
+using the command:
+curl -H "Accept-Encoding: gzip" www.yelp.com > "output.txt"
+
+and then this command:
+du -h output.txt 
+
+YIELDS
+ 24K	output.txt
+
+Shows that the gzip encoded (compressed) file was only 24K
+
+WHEREAS
+using the command:
+url www.yelp.com > "uncompressed-output.txt"
+
+and then this command:
+du -h uncompressed-output.txt 
+
+YIELDS
+ 96K	uncompressed-output.txt
+
+Which shows that the uncompressed yelp.com home page is 72k larger. The compressed version is 25% the size of the original.
+
+And if you look at the time to compress the original, it's only 11 miliseconds:
+$ time gzip uncompressed-output.txt 
+
+real	0m0.011s
+user	0m0.005s
+sys	0m0.004s
+
+
+
+
+
