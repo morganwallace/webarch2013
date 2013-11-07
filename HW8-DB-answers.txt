@@ -1,0 +1,43 @@
+Homework 8 - Databases
+
+
+SELECT
+How many links were added afer 2013-10-14?
+Answer:
+mysql> SELECT COUNT(*) FROM links WHERE created>'2013-10-14';
++----------+
+| COUNT(*) |
++----------+
+|       11 |
++----------+
+1 row in set (0.00 sec)
+
+
+How many links that were added before 2013-10-14 have fewer than 40 hits?
+Answer:
+mysql> SELECT COUNT(*) FROM links WHERE created>'2013-10-14' AND hit_count<40;
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
+
+
+INSERT
+Insert your own URL with a date before 2013-10-14 with greater than 40 hits.
+Answer:
+mysql> INSERT INTO links VALUES ("www.morganwallace.com","",41,2013-09-01);
+Query OK, 1 row affected, 1 warning (0.01 sec)  
+
+
+Is it possible that someone querying the database at the same time could see your insert partially complete (eg. only see some fields filled in)? What database property is this related to?
+No. You have isolation of users (hence the I in ACID). There is a transaction schedule that would allow my insert to complete first as it was reqested first and the DB processes transactions serially. Someone else's query would be locked out from my object until I finished my transaction.
+
+UPDATE
+Increment the hit_count for only your new row. What is the new count?
+mysql> UPDATE links
+    -> SET hit_count=hit_count+1
+    -> WHERE long_url="www.morganwallace.com";  
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
