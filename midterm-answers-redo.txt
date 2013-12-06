@@ -1,0 +1,28 @@
+8  Blink!
+function blink(){
+	var c = $("#blink").css("font-color");
+	if(c=="white"){
+		$("#blink").css("font-color","red");
+	}
+	else{
+		$("#blink").css("font-color","white");
+	}
+	
+	//pause .5 seconds and 'blink' the color again
+	window.setTimeout(blink,500);
+}
+
+
+
+9 Fill in the blanks for the next hTTP statement made after a browser receives the following response
+
+GET /app/search.html HTTP/1.1
+Host: example.com
+
+
+10 New Status Code
+In the 200 series of numbers, let's say 287. This is because 200's are designated as success or "ok." This falls in to that category and doesn't take up a number currently occupied.
+
+
+15 True or False
+TCP uses on IP = True
